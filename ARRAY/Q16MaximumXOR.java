@@ -1,6 +1,7 @@
 package ARRAY;
 
-
+// time complexity: O(n * logm)
+// Space complexity: O(n * logm)
 import java.util.HashSet;
 
 public class Q16MaximumXOR  {
@@ -18,6 +19,7 @@ public class Q16MaximumXOR  {
             }
 
             int candidate = maxXor | (1 << i);
+
             for (int prefix : set) {
                 if (set.contains(candidate ^ prefix)) {
                     maxXor = candidate;
