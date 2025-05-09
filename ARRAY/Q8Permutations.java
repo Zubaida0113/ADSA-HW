@@ -19,8 +19,14 @@ public class Q8Permutations {
 
         for (int i = index; i < arr.length; i++) {
             swap(arr, index, i);                        // Step 1: Fix character at index
+            // Print the current permutation
+            System.out.print("First "+ new String(arr)+" ");
             generatePermutations(arr, index + 1);       // Step 2: Recurse
+            // Print the current permutation
+            System.out.print("Second "+new String(arr)+" ");
             swap(arr, index, i);                        // Step 3: Backtrack
+            // Print the current permutation
+            System.out.print("Third "+new String(arr)+" ");
         }
     }
 
